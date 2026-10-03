@@ -43,7 +43,11 @@ docs/
 
 ## Публикация
 
-Результат сборки (`docs/.vitepress/dist`) — статический сайт, его можно выложить на GitHub Pages, GitLab Pages или любой веб-сервер. Если сайт открывается не из корня домена, а из подпапки (например, `https://user.github.io/integration-helper/`), задайте базовый путь при сборке:
+Сайт публикуется на GitHub Pages автоматически при каждом push в `main`: https://greymiller13.github.io/integration-helper/
+
+Сборку и выкладку выполняет workflow `.github/workflows/deploy.yml`, за ходом можно следить на вкладке **Actions** репозитория. Если сайт не появился, проверьте, что в **Settings → Pages** в поле **Source** выбрано **GitHub Actions**.
+
+Чтобы выложить сайт в другое место: результат сборки (`docs/.vitepress/dist`) — статический сайт, его можно выложить на GitHub Pages, GitLab Pages или любой веб-сервер. Если сайт открывается не из корня домена, а из подпапки (например, `https://user.github.io/integration-helper/`), задайте базовый путь при сборке:
 
 ```bash
 BASE=/integration-helper/ npm run build
